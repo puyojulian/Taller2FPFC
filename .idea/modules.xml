@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Taller2FAltoOrdenFPFC.iml" filepath="$PROJECT_DIR$/.idea/modules/Taller2FAltoOrdenFPFC.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Taller2FAltoOrdenFPFC-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Taller2FAltoOrdenFPFC-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project.Taller2FAltoOrdenFPFC-build.iml" filepath="$PROJECT_DIR$/.idea/modules/project.Taller2FAltoOrdenFPFC-build.iml" />
     </modules>
   </component>
 </project>

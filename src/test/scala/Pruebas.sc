@@ -5,6 +5,4 @@ N° Taller: 02
 Fecha de realización: 28/09/2023
 */
 
-package object Circuitos {
-
-}
+import Circuitos._
