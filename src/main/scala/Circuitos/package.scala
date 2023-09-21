@@ -13,4 +13,9 @@ package object Circuitos {
     chip
   }
 
+  def crearChipBinario (funcion:(Int,Int) => Int): Chip = {
+    def Chip(lista: List[Int]): List[Int] = List(funcion(lista.head, lista.tail.head))
+    Chip
+  }
+
 }
