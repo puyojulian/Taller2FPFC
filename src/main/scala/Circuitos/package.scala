@@ -18,4 +18,27 @@ package object Circuitos {
     Chip
   }
 
+  def half_adder: Chip = {
+    val chip_not = crearChipUnario((x: Int) => (1 - x))
+    val chip_and = crearChipBinario((x: Int, y: Int) => (x * y))
+    val chip_or = crearChipBinario((x: Int, y: Int) => x + y - (x * y))
+
+    (lista: List[Int]) => chip_and(lista)++chip_and(chip_or(lista)++chip_not(chip_and(lista)))
+  }
+
+  def full_adder: Chip = {
+    val chip_or = crearChipBinario((x: Int, y: Int) => x + y - (x * y))
+    val ha1 = half_adder
+    val ha2 = half_adder
+
+    def chip(lista: List[Int]):List[Int] = {
+      val cout = chip_or(ha1(lista.tail).head::ha2(lista.head::ha1(lista.tail).head::Nil).tail)
+      val sum = ha2(lista.head::ha1(lista.tail).tail).tail
+      cout++sum
+    }
+
+    chip
+  }
+
+
 }
