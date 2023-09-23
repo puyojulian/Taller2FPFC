@@ -32,7 +32,7 @@ package object Circuitos {
     val ha2 = half_adder
 
     def chip(lista: List[Int]):List[Int] = {
-      val cout = chip_or(ha1(lista.tail).head::ha2(lista.head::ha1(lista.tail).head::Nil).tail)
+      val cout = chip_or(ha1(lista.tail).head::ha2(lista.head::ha1(lista.tail).tail).head::Nil)
       val sum = ha2(lista.head::ha1(lista.tail).tail).tail
       cout++sum
     }
@@ -47,8 +47,9 @@ package object Circuitos {
       val lista2 = lista.drop(n)
 
       def add(k:Int, l1:List[Int], l2:List[Int], c:Int):List[Int] = {
-        if (k < n)
+        if (k < n) {
           add(k+1,l1.init,l2.init,fa(l1.last::l2.last::c::Nil).head)++fa(l1.last::l2.last::c::Nil).tail
+        }
         else
           c::Nil
       }

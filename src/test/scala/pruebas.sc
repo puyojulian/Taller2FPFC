@@ -30,9 +30,23 @@ fa(List(1,1,0))
 fa(List(1,1,1))
 fa(List(0,1,0))
 fa(List(0,1,1))
+fa(List(1,0,0))
 
 val add_1 = adder(1)
 add_1(List(1)++List(1))
 add_1(List(0)++List(0))
 add_1(List(1)++List(0))
 add_1(List(0)++List(1))
+
+val add_2 = adder(2)
+add_2(List(1,0)++List(0,1))
+add_2(List(1,1)++List(0,1))
+//add_1(List(1)++List(0))
+//add_1(List(0)++List(1))
+
+val add_3 = adder (3)
+add_3(List(1,0,1)++List(0,0,0))
+add_3(List(1,0,1)++List(1,0,1))
+
+val add_4= adder(4)
+add_4(List(1,0,1,1)++List(1,0,1,0))
