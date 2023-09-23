@@ -40,5 +40,21 @@ package object Circuitos {
     chip
   }
 
+  def adder(n:Int): Chip = {
+    def chip(lista: List[Int]): List[Int] = {
+      val fa = full_adder
+      val lista1 = lista.take(n)
+      val lista2 = lista.drop(n)
 
+      def add(k:Int, l1:List[Int], l2:List[Int], c:Int):List[Int] = {
+        if (k < n)
+          add(k+1,l1.init,l2.init,fa(l1.last::l2.last::c::Nil).head)++fa(l1.last::l2.last::c::Nil).tail
+        else
+          c::Nil
+      }
+      add(0,lista1,lista2,0)
+    }
+    chip
+  }
 }
+
