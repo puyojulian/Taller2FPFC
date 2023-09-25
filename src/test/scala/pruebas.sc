@@ -30,11 +30,21 @@ ha(List(1,0))
 ha(List(1,1))
 
 val fa = full_adder
+fa(List(0,0,0))
+fa(List(0,0,1))
+fa(List(0,1,0))
+fa(List(0,1,1))
+fa(List(1,0,0))
+fa(List(1,0,1))
+fa(List(1,1,0))
+fa(List(1,1,1))
+/*
 fa(List(1,1,0))
 fa(List(1,1,1))
 fa(List(0,1,0))
 fa(List(0,1,1))
 fa(List(1,0,0))
+*/
 
 val add_1 = adder(1)
 add_1(List(1)++List(1))
